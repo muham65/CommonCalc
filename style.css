@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.calculator {
+  width: 300px;
+  margin: 50px auto 80px auto;
+  padding: 20px;
+  background: #1c1c1c;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px #1c1c1c9f;
+}
+
+.display {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 2.5rem;
+  text-align: right;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #333;
+  border-radius: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 22px;
+  border: none;
+  border-radius: 50%;
+  background: #444;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button:active { background: #666; }
+.operator { background: #f39c12; }
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 16rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 26px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center; /* Выравнивает картинку и текст по центру */
+    gap: 10px;           /* Небольшой отступ между логотипом и названием */
+}
+
+.logo-img {
+    height: 50px;        /* Регулируй высоту под свой дизайн */
+    width: auto;         /* Сохраняет пропорции картинки */
+}
+
+.site-header nav a {
+  font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+}
+
+.site-header nav a:hover {
+    color: #007bff;
+}
+
+
+
+
+.site-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    padding: 40px 20px;
+    margin-top: 60px;
+    font-family: sans-serif;
+    color: #495057;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Левая сторона */
+.footer-left {
+    flex: 1;
+    max-width: 500px;
+}
+
+.tt {
+    text-decoration: none;
+    background: linear-gradient(50deg, #ff0015, #9a0c53, #1100ff);
+    
+    /* Обрезаем фон по контуру текста */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* Делаем сам текст прозрачным, чтобы видеть фон под ним */
+    color: transparent;
+    
+    /* Дополнительно: жирный шрифт делает градиент заметнее */
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.tg {
+    text-decoration: none;
+    background: linear-gradient(50deg, #0066ff, #004cff, #00ffe5);
+    
+    /* Обрезаем фон по контуру текста */
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* Делаем сам текст прозрачным, чтобы видеть фон под ним */
+    color: transparent;
+    
+    /* Дополнительно: жирный шрифт делает градиент заметнее */
+    font-weight: 800;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.footer-title {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+    color: #212529;
+}
+
+.footer-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    color: #adb5bd;
+    margin: 10px 0px 0px 0px;
+}
+
+/* Правая сторона */
+.footer-right {
+    flex: 1;
+    max-width: 400px;
+    text-align: right;
+}
+
+.footer-right h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    color: #212529;
+}
+
+.footer-right p {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Кнопка доната */
+.donate-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #ff4757;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 6px rgba(255, 71, 87, 0.2);
+    transition: all 0.2s ease;
+}
+
+.donate-btn:hover {
+    background-color: #ff6b81;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 71, 87, 0.3);
+}
