@@ -234,12 +234,4 @@ button:active { background: #666; }
         margin-left: 10px;
         font-size: 10px;
     }
-
-    .calculator {
-      width: 280px;
-    }
-
-    button {
-      padding: 20px;
-    }
 }
