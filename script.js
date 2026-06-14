@@ -46,7 +46,7 @@ window.clearDisplay = () => {
     lastExpression = "";
     isLearning = false;
     display.innerText = "0";
-    document.getElementById('status-bar').innerText = "Калькулятор готов";
+    document.getElementById('status-bar').innerText = "Введи пример";
 };
 
 window.calculate = async () => {
