@@ -1,6 +1,7 @@
 const SUPABASE_URL = 'https://xiznybqrdyzwjuiuvyhd.supabase.co'; 
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpem55YnFyZHl6d2p1aXV2eWhkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE0MjQ1NjIsImV4cCI6MjA5NzAwMDU2Mn0.l5iS1OFGw6l1meZaP1WWkIHlPsNsWHADzN3feSxszUs';
 
+
 let display = document.getElementById('display');
 let currentInput = "";
 let lastExpression = "";
@@ -8,6 +9,34 @@ let isLearning = false;
 let memory = {}; // <--- ЭТОТ ОБЪЕКТ УСКОРИТ РАБОТУ В 100 РАЗ
 
 window.append = (val) => {
+    const operators = ['+', '-', '*', '/'];
+    const lastChar = currentInput.slice(-1);
+
+    // 1. ЗАЩИТА: Если режим обучения, разрешаем только цифры
+    if (isLearning) {
+        if (operators.includes(val)) {
+            statusBar.innerText = "В режиме ответа можно вводить только цифры!";
+            return;
+        }
+    }
+
+    // 2. ЗАЩИТА: Нельзя начинать с оператора
+    if (currentInput === "" && operators.includes(val)) {
+        return;
+    }
+
+    // 3. ЗАЩИТА: Нельзя начинать ввод с нуля
+    if (currentInput === "" && val === '0') {
+        statusBar.innerText = "Нельзя начинать с нуля!";
+        return;
+    }
+
+    // 4. ЗАЩИТА: Нельзя ставить два оператора подряд
+    if (operators.includes(lastChar) && operators.includes(val)) {
+        return;
+    }
+
+    // Если всё ок
     currentInput += val;
     display.innerText = currentInput;
 };
